@@ -1,1 +1,2 @@
-Test txt file, to train with git
+Test txt file, to train with git -- edited
+
