@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Open+Sans&display=swap');
 
+
 :root {
     
     /* PLATINUM THEME VARIABLES */
@@ -20,6 +21,9 @@
         black,
         rgb(20, 20, 20)
     );
+
+    --ptm-btn-color: #fefefe;
+    --ptm-btn-bg: rgb(30, 30, 30);
 }
 
 a {
@@ -136,6 +140,98 @@ color: var(--ptm-color-bis);
         black 3px 3px 0;
 }
 
+.ptm-pagination-btn {
+
+    padding: 0 20px;
+    height: 45px;
+
+    border: 1px solid crimson;
+    border-radius: 5px;
+
+    color: var(--ptm-btn-color);
+    font-size: 1rem;
+    background: var(--ptm-btn-bg);
+
+    cursor: pointer;
+    transition: background .2s ease;
+}
+
+.ptm-pagination-btn:active {
+    background: rgba(10, 10, 10);
+}
+
+/* MAIN GALLERY MODULE */
+
+.ptm-gallery-wrapper {
+    columns: 5;
+    column-gap: 4%;
+    padding: 50px; 
+} 
+
+.ptm-gallery-wrapper .img-item {
+
+    border-radius: 5px;
+    box-shadow: 0 0 5px black;
+    color: white;
+    background: grey;
+
+    width: 100%;
+    break-inside: avoid;
+    margin-bottom: 30px;
+
+    transition: all .3s ease;
+}
+
+.ptm-gallery-wrapper .img-item img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+.ptm-gallery-wrapper .img-item:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px black;
+    cursor: pointer;
+}
+
+.ptm-gallery-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .6);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all .25s ease-out;
+    pointer-events: none;
+}
+
+.ptm-gallery-modal .full-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 70vh;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all .25s ease-out;
+    overflow-x: scroll;
+
+}
+
+.ptm-gallery-modal.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.ptm-gallery-modal .full-img.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1.2);
+
+}
+
 /* RÈGLES SPÉCIFIQUES */
 
 #ptm-main-wrapper {
@@ -201,4 +297,28 @@ color: var(--ptm-color-bis);
     justify-content: space-around;
     align-items: center;
     font-size: 1.5em;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1200px) {
+    .ptm-gallery-wrapper {
+        columns: 3;
+    }
+}
+
+@media (max-width: 1000px) {
+    .ptm-gallery-wrapper {
+        columns: 2;
+    }
+}
+
+@media (max-width: 800px) {
+    .ptm-gallery-wrapper {
+        columns: 1;
+    }
+
+    .ptm-gallery-wrapper .img-item:hover {
+        transform: unset;
+    }
 }
