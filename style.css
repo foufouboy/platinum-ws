@@ -23,7 +23,7 @@
     );
 
     --ptm-btn-color: #fefefe;
-    --ptm-btn-bg: rgb(30, 30, 30);
+    --ptm-btn-bg: rgb(20, 20, 20);
 }
 
 a {
@@ -51,6 +51,7 @@ body {
     background-size: calc(max(100%, 1300px));
     background-attachment: fixed;
 color: var(--ptm-color-bis);
+    /*! margin-top: 0; */
 }
 
 /* RÈGLES MODULES */
@@ -74,6 +75,14 @@ color: var(--ptm-color-bis);
   border-radius: 0 32px;
   border: var(--ptm-border);
   outline: 3px solid black;
+}
+
+.ptm-main-box {
+    
+}
+
+.ptm-box-gradient {
+    
 }
 
 .ptm-btm-dropup {
@@ -140,6 +149,12 @@ color: var(--ptm-color-bis);
         black 3px 3px 0;
 }
 
+.ptm-gallery-pagination {
+    display: flex;
+    justify-content: end;
+    margin: 0 50px;
+}
+
 .ptm-pagination-btn {
 
     padding: 0 20px;
@@ -154,6 +169,12 @@ color: var(--ptm-color-bis);
 
     cursor: pointer;
     transition: background .2s ease;
+    margin-left: 20px;
+    font-family: "Open Sans";
+    font-weight: bold;
+    /*! vertical-align: baseline; */
+    display: flex;
+    align-items: center;
 }
 
 .ptm-pagination-btn:active {
@@ -162,10 +183,32 @@ color: var(--ptm-color-bis);
 
 /* MAIN GALLERY MODULE */
 
+
+
+.ptm-gallery-head {
+    
+	min-height: 200px;
+	background: rgb(20, 20, 20);
+	border: 1px solid rgb(220,20,60, .6);
+	border-radius: 5px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 10%;
+    margin: 0 50px;
+    
+}
+
 .ptm-gallery-wrapper {
+    
     columns: 5;
     column-gap: 4%;
     padding: 50px; 
+	background: linear-gradient(to left, rgba(20, 20, 20, 0.9), rgba(30, 30, 30), rgba(20, 20, 20, 0.9));
+	border-radius: 5px;
+	margin: 50px;
+    margin-bottom: 30px;
+    
 } 
 
 .ptm-gallery-wrapper .img-item {
@@ -173,7 +216,7 @@ color: var(--ptm-color-bis);
     border-radius: 5px;
     box-shadow: 0 0 5px black;
     color: white;
-    background: grey;
+    background: rgb(30, 30, 30, .8);
 
     width: 100%;
     break-inside: avoid;
@@ -268,6 +311,7 @@ color: var(--ptm-color-bis);
 
 #ptm-main-title {
     font-size: 7em;
+    line-height: 120px;
     letter-spacing: 0.07em;
     text-shadow: 
         black -8px 0px,
@@ -286,7 +330,7 @@ color: var(--ptm-color-bis);
 #ptm-nav {
 	border-radius: 240px 240px / 40px 40px 0 0;
     border-top: var(--ptm-border);
-    min-width: 1300px;
+    /*! min-width: 1300px; */
 }
 
 #ptm-nav > ul {
@@ -297,6 +341,10 @@ color: var(--ptm-color-bis);
     justify-content: space-around;
     align-items: center;
     font-size: 1.5em;
+}
+
+#ptm-gallery-title {
+    font-size: 5em;
 }
 
 /* MEDIA QUERIES */

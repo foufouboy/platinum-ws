@@ -7,6 +7,11 @@
 </head>
 <body>
     <div id="ptm-gallery">
+        <div class="ptm-gallery-head">
+            <div class="ptm-title" id="ptm-gallery-title">Gallery</div>
+            <label class="ptm-pagination-btn" for="file">Upload</label>
+            <input id="file" class="ptm-gallery-upload" type="file" style="display: none;">
+        </div>
         <div class="ptm-gallery-wrapper">
             <div  class="img-item"><img src="https://i.ibb.co/2hDshqP/dcy2yez-c58427de-e10c-4ba9-ab3d-d574ca9c792c.png" alt="Image"></div>
             <div style="" class="img-item"><img src="
@@ -22,9 +27,25 @@
         <div class="ptm-gallery-modal">
             <img class="full-img" src="https://i.ibb.co/2hDshqP/dcy2yez-c58427de-e10c-4ba9-ab3d-d574ca9c792c.png" alt="the full image">
         </div>
+        <div class="ptm-gallery-pagination">
+            <button class="ptm-pagination-btn">Next</button>
+            <button class="ptm-pagination-btn">Previous</button>
+        </div>
     </div>
+    <nav id="ptm-nav" class="ptm-btm-dropup">
+        <span>
+            <i class="ptm-btm-dropup-icon"></i>
+        </span>
+        <ul>
+            <li class="ptm-title ptm-menu-item"><a href="#">Rubric</a></l>
+            <li class="ptm-title ptm-menu-item"><a href="#">Rubric</a></li>
+            <li class="ptm-title ptm-menu-item"><a href="#">Rubric</a></li>
+            <li class="ptm-title ptm-menu-item"><a href="#">Rubric</a></li>
+        </ul>
+    </nav>
 
-    <script src="gallery.js"></script>
+    <script src="gallery.js" type="module"></script>
+    <script src="gallery-add.js" type="module"></script>
     <script src="dropMenu.js"></script>
 </body>
 </html>
